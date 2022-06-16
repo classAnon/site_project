@@ -179,8 +179,8 @@ select:focus{
         border: 0;
         background-color: red;
         color: white;
-        font-size: 30px;        
-        margin: 10px;
+        font-size: 25px;        
+        margin: 5px;
         align-self: flex-end;
     }
 
