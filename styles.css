@@ -1,0 +1,493 @@
+section{
+    height: fit-content;
+}
+
+section h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;    
+}
+
+hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+.hero{
+    background-image: url('https://statics4pf.s3.amazonaws.com/Canada-Flag.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 800px;
+    font-size: 26px;
+    padding-top: 2vh;
+}
+
+li a{
+    color: red!important;
+}
+
+li a:hover{
+    color: white!important;
+}
+
+.hero-area{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.hero-name{
+    margin: 20vh auto auto 10vw;
+    
+}
+
+.hero-name h2{
+    font-size: 35px;
+    font-weight: bolder;
+    color: red!important;
+}
+
+.hero-name p{
+    font-size: 23px;
+    font-weight: bold;
+    color: red!important;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hero-about-btn{
+    height: 10vh;
+    width: 80%;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.hero-about-btn a{
+    color: white!important;
+}
+
+.hero-about-btn:hover{
+    background-color: rgb(255, 71, 71);
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.about-container{
+    background-color: white;
+    width: 100%;
+    padding-bottom: 5vh;
+}
+
+
+.about-us h2{
+    display: flex;
+    justify-content: center;
+    margin: 3vh;
+}
+
+.about-us p{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3vh auto auto 3vw;
+    overflow: hidden;
+}
+
+.about-field{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+#about-us-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 10vh;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#about-us-btn:hover{
+    background-color: rgb(255, 71, 71);
+    border: 1px solid red;
+}
+
+.subtext{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 40px 20px;
+}
+
+.testimonials{
+    height: fit-content;
+    background-color: white;
+    margin: 25px;
+    margin-bottom: 60px;
+}
+
+.testimonials h2{
+    display: flex;
+    justify-content: center;
+    margin: 7vh;
+}
+
+.testimonials-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonials-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0;
+    box-shadow: 10px 10px 25px rgb(70, 68, 68);
+}
+
+.testimonials-img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 180px;
+    border-radius: 90px;
+}
+
+.core-services{
+    background-color: white;
+}
+
+.core-services h2{
+    display: flex;
+    justify-content: center;
+    margin: 7vh;
+}
+
+.core-services h5, .core-services blockquote{
+    display: flex;
+    justify-content: center;
+    margin: 4vh;
+}
+
+.core-services-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 7vh;
+}
+
+.core-services-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0;
+    box-shadow: 10px 10px 25px rgb(70, 68, 68);
+}
+
+.core-services-img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 180px;
+    border-radius: 90px;
+}
+
+#core-services-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    min-width: 100%;
+    height: 6vh;
+    padding: 5px;
+    font-weight: bold;
+} 
+
+#core-services-btn:hover{
+    background-color: rgb(255, 71, 71);
+    border: 1px solid red;
+}
+
+.contact-us{
+    background-color: white;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.contact-us h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container{
+    background-color: rgb(253, 224, 224);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+
+.form-container input{
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container textarea{
+    width: 300px;
+    height: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container #form-submit-btn{
+    margin: 25px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.form-container #form-submit-btn:hover{
+    background-color: rgb(255, 71, 71);
+    border: 1px solid red;
+}
+
+.our-process h2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 5vh;
+}
+
+.process-container{
+    background: linear-gradient(to right, rgb(255, 123, 123), rgb(253, 168, 168));
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.process-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid  red;
+    border-top-style: none;
+    border-bottom-style: none;
+}
+
+#p-card1{
+    border-left-style: none;
+}
+
+#p-card4{
+    border-right-style: none;
+}
+
+.process-card h3{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.iframe-space{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.immigration-news{
+    background-color: rgb(250, 226, 226);
+}
+
+.immigration-news h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    margin-top: 5vh;
+}
+
+.news-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.news-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    border: 0;
+    box-shadow: 10px 10px 25px rgb(70, 68, 68);
+}
+
+.news-card h5{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.news-img{
+    margin: 0;
+    width: 100%;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;;
+    background-color: rgb(100, 10, 45);
+    color: white;
+}
+
+.footer-card{
+    color: white;
+}
+
+.footer-items a{
+    color: white;
+}
+
+.footer-items a:hover{
+    color: rgb(255, 71, 71)!important;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger:focus{
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px){
+    .hamburger{
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;        
+        margin: 10px;
+        align-self: flex-end;
+    }
+
+    ul {
+        display: none;
+        margin: 0px;
+        padding-bottom: 10px;
+        background-color: white;
+    }
+
+    ul.show{
+        display: block;
+    }
+
+    li:hover{
+        display: block;
+        background-color: rgb(241, 239, 239);
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .about-us{
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .testimonials-container{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .core-services-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .process-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .news-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .text-input input{
+        width: 300px;
+        padding: 5px;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-card{
+        padding: 15px;
+        justify-content: center;
+    }
+}
