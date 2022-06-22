@@ -19,7 +19,7 @@ a {
 }
 
 .hero{
-    background-image: url('https://statics4pf.s3.amazonaws.com/Canada-Flag.jpg');
+    background-image: url('https://statics4pf.s3.amazonaws.com/Canada-Flag.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -389,7 +389,7 @@ li a:hover{
     display: flex;
     justify-content: space-around;
     padding: 50px;;
-    background-color: rgb(100, 10, 45);
+    background-color: red;
     color: white;
 }
 

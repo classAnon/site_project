@@ -99,7 +99,7 @@ li a:hover{
     display: flex;
     justify-content: space-around;
     padding: 50px;;
-    background-color: rgb(100, 10, 45);
+    background-color: red;
     color: white;
 }
 
