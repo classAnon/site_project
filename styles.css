@@ -347,7 +347,7 @@ li a:hover{
 
 
 .immigration-news{
-    background-color: rgb(250, 226, 226);
+    background-color: rgb(241, 239, 239);
 }
 
 .immigration-news h2{
@@ -369,7 +369,7 @@ li a:hover{
     align-items: center;
     width: 300px;
     margin-top: 10px;
-    background-color: antiquewhite;
+    background-color: white;
     border: 0;
     box-shadow: 10px 10px 25px rgb(70, 68, 68);
 }
