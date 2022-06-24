@@ -5,7 +5,7 @@ section{
 section h2{
     display: flex;
     justify-content: center;
-    font-size: 50px;    
+    font-size: 40px;    
 }
 
 nav{
@@ -58,7 +58,6 @@ li a:hover{
     display: flex;
     justify-content: center;
     margin: 3vh;
-    overflow: hidden;
 }
 
 .about-us p{
@@ -210,7 +209,9 @@ select:focus{
     .about-us{
         padding: 10px;
         margin: 10px;
+        overflow: hidden;
     }
+
 
     .text-input input{
         width: 300px;

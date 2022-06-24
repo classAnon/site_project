@@ -172,7 +172,7 @@ li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    height: fit-content;
     width: 300px;
     margin-top: 10px;
     padding: 10px;
@@ -261,6 +261,7 @@ li a:hover{
 
 .form-container{
     background-color: rgb(241, 239, 239);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,7 +307,7 @@ li a:hover{
 }
 
 .process-container{
-    background: linear-gradient(to right, rgb(255, 123, 123), rgb(253, 168, 168));
+    background: linear-gradient(to right, rgb(255, 163, 163), rgb(255, 229, 229));
     display: flex;
     justify-content: space-around;
     padding: 50px;
@@ -325,6 +326,14 @@ li a:hover{
 }
 
 #p-card1{
+    border-left-style: none;
+}
+
+#p-card2{
+    border-right-style: none;
+}
+
+#p-card3{
     border-left-style: none;
 }
 
