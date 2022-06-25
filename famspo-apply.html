@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Canada Visa Consulate| Study</title>
+    <title> Canada Visa Consulate| Family Sponsorship</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0daa527358.js" crossorigin="anonymous"></script>
 </head>
@@ -36,9 +36,9 @@
 
     <section class="apply-container">
         <div class="about-us">
-            <h2>Study Visa Application</h2>
+            <h2>Family Sponsorship Application</h2>
             <!--<div class="about-img">
-                <img src="https://statics4pf.s3.amazonaws.com/classAs.png" height="350" width="500" style="margin: 2vh;"/>
+                <img src="https://statics4pf.s3.amazonaws.com/Screenshot_20200414-162405.png" height="350" width="700" style="margin: 2vh;"/>
             </div>-->
             <form action="" class="apply-form">
                 <div>
@@ -73,9 +73,31 @@
                         <label for="lang2">French</label><br><br>
                     </div>
                     
+                    <label for="visa-type"class="label"><h5>Are you a citizen or Permanent Resident?</h5></label><br>
+                    <div class="radio-input">
+                        <input type="radio" id="citizenship" name="visa-type">
+                        <label for="citizenship">Citizen</label><br>
+                        <input type="radio" id="pr" name="visa-type">
+                        <label for="pr">Permanent Resident(PR)</label><br><br>
+                    </div>
 
                     <label for="first-time" class="label"><h5>First time applying?</h5></label><br>
                     <select id="first-time" name="first-time" style="width: 80px; height: 30px; border-radius: 5px;">
+                        <option></option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><br><br>
+
+
+                    <label for="family-needs" class="label"><h5>Can you provide for your family?</h5></label><br>
+                    <select id="family-needs" name="family-needs" style="width: 80px; height: 30px; border-radius: 5px;">
+                        <option></option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><br><br>
+
+                    <label for="current-residence" class="label"><h5>Are you currently residing in Canada?</h5></label><br>
+                    <select id="current-residence" name="current-residence" style="width: 80px; height: 30px; border-radius: 5px;">
                         <option></option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
