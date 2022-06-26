@@ -95,7 +95,7 @@ li a:hover{
 }
 
 .hero-about-btn:hover{
-    background-color: rgb(255, 71, 71);
+    background-color: rgb(151, 40, 40);
     border: 1px solid maroon;
     cursor: pointer;
 }
@@ -143,7 +143,7 @@ li a:hover{
 }
 
 #about-us-btn:hover{
-    background-color: rgb(255, 71, 71);
+    background-color: rgb(151, 40, 40);
     border: 1px solid maroon;
 }
 
@@ -246,7 +246,7 @@ li a:hover{
 } 
 
 #core-services-btn:hover{
-    background-color: rgb(255, 71, 71);
+    background-color: rgb(151, 40, 40);
     border: 1px solid maroon;
 }
 
@@ -298,7 +298,7 @@ li a:hover{
 }
 
 .form-container #form-submit-btn:hover{
-    background-color: maroon;
+    background-color: rgb(151, 40, 40);
     border: 1px solid rgb(255, 70, 70);
 }
 
@@ -443,8 +443,7 @@ li a:hover{
         border-radius: 5px;
         background-color: maroon;
         color: white;
-        font-size: 30px; 
-        width: 1.5em;       
+        font-size: 30px;        
         margin: 5px;
         justify-content: center;
         align-self: flex-end;
