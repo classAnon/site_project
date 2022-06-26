@@ -18,6 +18,7 @@ a {
     text-decoration: none!important;
 }
 
+
 .hero{
     background-image: url('https://statics4pf.s3.amazonaws.com/Canada-Flag.png');
     background-size: cover;
@@ -25,6 +26,8 @@ a {
     background-attachment: fixed;
     height: 120vh;
 }
+
+
 
 nav{
     display: flex;
@@ -35,8 +38,9 @@ ul{
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    width: 800px;
-    font-size: 26px;
+    width: 1000px;
+    font-size: 30px;
+    font-weight:500;
     padding-top: 2vh;
 }
 
@@ -425,6 +429,9 @@ li a:hover{
 @media only screen and (max-width: 1000px){
     .hamburger{
         display: block;
+        position: absolute;
+        top: 25px;
+        right: 5px;
         border: 0;
         border-radius: 5px;
         background-color: red;
@@ -432,6 +439,10 @@ li a:hover{
         font-size: 25px;        
         margin: 5px;
         align-self: flex-end;
+    }
+
+    .hero{
+        height: 150vh;
     }
 
     ul {
@@ -453,10 +464,6 @@ li a:hover{
     nav {
         display: flex;
         flex-direction: column-reverse;
-    }
-
-    .logo{
-        display: none;
     }
 
     .about-us{
