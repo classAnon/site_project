@@ -195,8 +195,9 @@ select:focus{
         background-color: maroon;
         color: white;
         font-size: 30px; 
-        width: 2em;       
+        width: 1.5em;       
         margin: 5px;
+        justify-content: center;
         align-self: flex-end;
     }
 
