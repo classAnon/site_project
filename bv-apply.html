@@ -58,7 +58,7 @@
             <!--<div class="about-img">
                 <img src="https://statics4pf.s3.amazonaws.com/Screenshot_20200414-162405.png" height="350" width="700" style="margin: 2vh;"/>
             </div>-->
-            <form action="" class="apply-form">
+            <form action="" method="post" id="form-apply" class="apply-form">
                 <div>
                     <div class="text-input">
                         <label for="fname" class="label"><h5>First Name</h5></label><br>
@@ -72,7 +72,7 @@
 
                     <label for="age"class="label"><h5>Age</h5></label><br>
                     <div class="radio-input">
-                        <input type="radio" id="age1" name="age">
+                        <input type="radio" id="age1" name="age" required>
                         <label for="age1">18 - 25</label><br>
                         <input type="radio" id="age2" name="age">
                         <label for="age2">25 - 35</label><br>  
@@ -93,7 +93,7 @@
                     
 
                     <label for="first-time" class="label"><h5>First time applying?</h5></label><br>
-                    <select id="first-time" name="first-time" style="width: 80px; height: 30px; border-radius: 5px;">
+                    <select id="first-time" name="first-time" style="width: 80px; height: 30px; border-radius: 5px;" required>
                         <option></option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -109,7 +109,7 @@
 
 
                     <label for="country" class="label"><h5>Country</h5></label><br>    
-                    <select id="country" name="country" style="width: 220px; height: 30px; border-radius: 5px;">
+                    <select id="country" name="country" style="width: 220px; height: 30px; border-radius: 5px;" required>
                         <option></option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
@@ -359,7 +359,7 @@
 
 
                     <label for="gender" class="label"><h5>Gender</h5></label><br>   
-                    <select id="gender" name="gender" style="width: 150px; height: 30px; border-radius: 5px;">
+                    <select id="gender" name="gender" style="width: 150px; height: 30px; border-radius: 5px;" required>
                         <option></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -369,7 +369,7 @@
                 </div>
             </form>
             <div class="about-field">
-                <button type="Submit" id="about-us-btn">Submit Application</button>
+                <button type="Submit" form="form-apply" id="about-us-btn">Submit Application</button>
             </div>
         </div>
     </section>

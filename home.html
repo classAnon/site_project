@@ -153,14 +153,14 @@
 
 
     <section class="contact-us">
-        <form action="" id="contact-us">
+        <form action="/form.php" method="post" id="contact-us">
             <h2>Contact Us</h2>
             <div class="form-container">
-                <input type="text" id="fname" name="fname" placeholder="first name"><br>
+                <input type="text" id="fname" name="fname" placeholder="first name" required><br>
                 <input type="text" id="lname" name="lname" placeholder="last name"><br>
-                <input type="text" id="email" name="email" placeholder="email"><br>
-                <input type="number" id="phone" name="phone" placeholder="phone no."><br>
-                <textarea placeholder="write to us..."></textarea><br>
+                <input type="text" id="email" name="email" placeholder="email" required><br>
+                <input type="number" id="phone" name="phone" placeholder="phone no." required><br>
+                <textarea placeholder="write to us..." id="client-msg" name="client-msg" required></textarea><br>
                 <input type="submit" id="form-submit-btn" value="Send">
             </div>
         </form>
