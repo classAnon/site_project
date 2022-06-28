@@ -83,11 +83,15 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
     $body .= "Message: " . $_POST['client-msg'] . "\r\n";
     $body .= "IP: " . $userIp . "\r\n";
     $body .= "Country: " . $userCountry . "\r\n";
-    $body .= "OS: " . getUserOS() . "\r\n";
-    $body .= "Browser: " . getUserBrowser() . "\r\n";
     $body .= "Date: " . $dateSubmitted . "\r\n";
 
-    mail($sendTo, "New Client Contact", $body);
+    $email_send = mail($sendTo, "New Client Contact", $body);
+
+    if ($email_send==true) {
+        echo "Message sent successfully...";
+    }else {
+        echo "Message could not be sent...";
+    }
 
 }
 
