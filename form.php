@@ -134,6 +134,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
 
+		header("Location: home.html");
+
 	} elseif ($famspo-apply==true) {
 
 		$sendTo = $_POST['email'];
@@ -185,6 +187,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
 		
+		header("Location: home.html");
+
 	} elseif($contact-us==true){
 		$sendTo = "contact@canadavisaconsulate.com";
 		$sentFrom = $_POST['email'];
@@ -205,6 +209,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 		}else {
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
+
+		header("Location: home.html");
 
 	} elseif(bv-apply==true){
 		$sendTo = $_POST['email'];
@@ -249,6 +255,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
 
+		header("Location: home.html");
+
 	} elseif(pr-apply==true){
 		$sendTo = $_POST['email'];
 		$sentFrom ="Canada Visa and Immigration Consulate";
@@ -291,6 +299,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 		}else {
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
+
+		header("Location: home.html");
 
 	} elseif(sv-apply==true){
 		$sendTo = $_POST['email'];
@@ -335,6 +345,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
 
+		header("Location: home.html");
+
 	} elseif(tv-apply==true){
 		$sendTo = $_POST['email'];
 		$sentFrom ="Canada Visa and Immigration Consulate";
@@ -377,6 +389,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 		}else {
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
+
+		header("Location: home.html");
 
 	} elseif(wp-apply==true){
 		$sendTo = $_POST['email'];
@@ -421,6 +435,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
 
+		header("Location: home.html");
+
 	} elseif(wv-apply==true){
 		$sendTo = $_POST['email'];
 		$sentFrom ="Canada Visa and Immigration Consulate";
@@ -463,6 +479,8 @@ if(isset($_POST['email']) && $_POST['fname'] != ''){
 		}else {
 			echo "Something went wrong, $_POST['fname']...Try Again!";
 		}
+
+		header("Location: home.html");
 
 	}
 
