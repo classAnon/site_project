@@ -1,4 +1,8 @@
-<?php   
+<?php
+
+ini_set('display_errors', 1);
+error_reporting( E_ALL );
+
 $userIp = $_SERVER['REMOTE_ADDR'];
 $ipData = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $userIp));
 $userCountry = $ipData->geoplugin_countryName;
@@ -69,29 +73,398 @@ function getUserBrowser() {
 	}
 	return $browser;
 }
-   
+ 
+
+$ex-apply = $_POST['ex-apply'];
+$famspo-apply = $_POST['famspo-apply'];
+$contact-us = $_POST['contact-us'];
+$bv-apply = $_POST['bv-apply'];
+$pr-apply = $_POST['pr-apply'];
+$sv-apply = $_POST['sv-apply'];
+$tv-apply = $_POST['tv-apply'];
+$wp-apply = $_POST['wp-apply'];
+$wv-apply = $_POST['wv-apply'];
+
+
 if(isset($_POST['email']) && $_POST['fname'] != ''){
+	if($ex-apply == true){
 
- // (box to receive logs)
-    $sendTo = "gerardhaggett0@gmail.com";   
-    $body = "";
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Express Entry Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
 
-    $body .= "First Name: " . $_POST['fname'] . "\r\n";
-    $body .= "Last Name: " . $_POST['lname'] . "\r\n";
-    $body .= "Email: " . $_POST['email'] . "\r\n";
-    $body .= "Phone: " . $_POST['phone'] . "\r\n";
-    $body .= "Message: " . $_POST['client-msg'] . "\r\n";
-    $body .= "IP: " . $userIp . "\r\n";
-    $body .= "Country: " . $userCountry . "\r\n";
-    $body .= "Date: " . $dateSubmitted . "\r\n";
+		$ourbody = "";
 
-    $email_send = mail($sendTo, "New Client Contact", $body);
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details of your express entry application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Category: " . $_POST['express-category'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-    if ($email_send==true) {
-        echo "Message sent successfully...";
-    }else {
-        echo "Message could not be sent...";
-    }
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Category: " . $_POST['express-category'] . "\r\n";
+		$ourbody .= "Form Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "IP: " . $userIp . "\r\n";
+		$ourbody .= "Date: " . $dateSubmitted . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif ($famspo-apply==true) {
+
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Family Sponsorship Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details of your express entry application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "Visa Type: " . $_POST['visa-type'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Can you provide for your family? " . $_POST['family-needs'] . "\r\n";
+		$body .= "Currently living in Canada? " . $_POST['current-residence'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "Visa Type: " . $_POST['visa-type'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Can you provide for your family? " . $_POST['family-needs'] . "\r\n";
+		$ourbody .= "Currently living in Canada? " . $_POST['current-residence'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "IP: " . $userIp . "\r\n";
+		$ourbody .= "Date: " . $dateSubmitted . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+		
+	} elseif($contact-us==true){
+		$sendTo = "contact@canadavisaconsulate.com";
+		$sentFrom = $_POST['email'];
+		$subject = "Contact Form";
+		$headers = "From:" . $sentFrom;   
+		$ourbody = "";
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Phone: " . $_POST['phone'] . "\r\n";
+		$ourbody .= "Message: " . $_POST['client-msg'] . "\r\n";
+
+		$admin_email = mail($sendTo, $subject, $ourbody, $headers);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(bv-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Business Visa Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Business Visa application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(pr-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Permanent Residence(PR) Visa Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Permanent Residence(PR) Visa application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(sv-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Study Visa Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Study Visa application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(tv-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Tourist Visa Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Tourist Visa application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(wp-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Work Permit Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Work Permit application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	} elseif(wv-apply==true){
+		$sendTo = $_POST['email'];
+		$sentFrom ="Canada Visa and Immigration Consulate";
+		$subject = "Work Visa Application";
+		$headers = "From:" . $sentFrom;   
+		$body = "";
+
+		$ourbody = "";
+
+		$body .= "Hello $_POST['fname'], " . "\r\n" . "\r\n";
+		$body .= "Here are the details you filled for your Work Visa application: " . "\r\n" . "\r\n";
+		$body .= "First Name: " . $_POST['fname'] . "\r\n";
+		$body .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$body .= "Email: " . $_POST['email'] . "\r\n";
+		$body .= "Age: " . $_POST['age'] . "\r\n";
+		$body .= "Language: " . $_POST['language'] . "\r\n";
+		$body .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$body .= "Country: " . $_POST['country'] . "\r\n";
+		$body .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$body .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$client_email = mail($sendTo, $subject, $body, $sentFrom);
+
+		sleep(1);
+
+		$ourbody .= "First Name: " . $_POST['fname'] . "\r\n";
+		$ourbody .= "Last Name: " . $_POST['lname'] . "\r\n";
+		$ourbody .= "Email: " . $_POST['email'] . "\r\n";
+		$ourbody .= "Age: " . $_POST['age'] . "\r\n";
+		$ourbody .= "Language: " . $_POST['language'] . "\r\n";
+		$ourbody .= "First time applying? " . $_POST['first-time'] . "\r\n";
+		$ourbody .= "Country: " . $_POST['country'] . "\r\n";
+		$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
+		$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
+
+		$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+
+		if ($client_email==true && $admin_email==true) {
+			echo "Application submitted successfully...";
+		}else {
+			echo "Something went wrong, $_POST['fname']...Try Again!";
+		}
+
+	}
 
 }
 
