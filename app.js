@@ -18,10 +18,11 @@ function submitForm(form){
     })
     .then((isOkay) => {
         if (isOkay) {
-            swal("Great! Your Application has been succesfully submitted!", {
+            swal("Succesfully submitted!", {
                 icon: "success",
               });
             form.submit();
+            location.reload();
         }
     });
 
