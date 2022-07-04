@@ -48,6 +48,7 @@ li a:hover{
     background-color: rgb(241, 239, 239);
     padding: 45px;
     margin: 70px;
+    border-radius: 10px;
 }
 
 .about-us h2{
@@ -81,6 +82,7 @@ li a:hover{
     justify-content: center;
     align-items: center;
     margin-top: 6vh;
+    margin-bottom: 4vh;
     background-color: maroon;
     color: white;
     width: 300px;
@@ -132,10 +134,7 @@ li a:hover{
     background-color: rgb(241, 239, 239);
     display: flex;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    margin-bottom: 3vh;
+    padding-top: 15px;
 }
 
 
