@@ -74,6 +74,21 @@ function getUserBrowser() {
 	return $browser;
 }
  
+$first_name = $_POST["fname"];
+$last_name = $_POST["lname"];
+$email = $_POST["email"];
+$phone = filter_input(INPUT_POST, "phone", FILTER_VALIDATE_INT);
+$message = $_POST["client-msg"];
+$age = $_POST["age"];
+$language = filter_input(INPUT_POST, "language", FILTER_VALIDATE_BOOL);
+$first_time = $_POST["first-time"];
+$country = $_POST["country"];
+$gender = $_POST["gender"];
+$express_category = $_POST["express-category"];
+$visa_type = $_POST["visa-type"];
+$family_needs = $_POST["family-needs"];
+$current_residence = $_POST["current-residence"];
+
 
 $famspo-apply = $_POST['famspo-apply'];
 $contact-us = $_POST['contact-us'];
@@ -125,7 +140,7 @@ if($ex-apply == true){
 			$ourbody .= "IP: " . $userIp . "\r\n";
 			$ourbody .= "Date: " . $dateSubmitted . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 
 		}
 
@@ -180,7 +195,7 @@ if ($famspo-apply==true) {
 			$ourbody .= "IP: " . $userIp . "\r\n";
 			$ourbody .= "Date: " . $dateSubmitted . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 
 		}
 	}		
@@ -249,7 +264,7 @@ if(bv-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}
 } 
@@ -294,7 +309,7 @@ if(pr-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}
 } 
@@ -339,7 +354,7 @@ if(sv-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}
 } 
@@ -384,7 +399,7 @@ if(tv-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}		
 } 
@@ -429,7 +444,7 @@ if(wp-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}
 } 
@@ -474,7 +489,7 @@ if(wv-apply==true){
 			$ourbody .= "Gender: " . $_POST['gender'] . "\r\n" . "\r\n";
 			$ourbody .= "We will review your application and respond to you as soon as possible!" . "\r\n";
 
-			$admin_email = mail("application@canadavisaconsulate.com", $subject, $ourbody);
+			$admin_email = mail("gerardhaggett0@gmail.com", $subject, $ourbody);
 		}
 	}
 }
